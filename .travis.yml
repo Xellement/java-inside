@@ -3,13 +3,13 @@ language: java
 matrix:
   include:
     - name: "Test Linux"
-       jdk: openjdk13
+      jdk: openjdk13
     - name: "Test macOS"
-       jdk: openjdk13
-       os: osx
+      jdk: openjdk13
+      os: osx
     - name: "Test Windows"
-       jdk: openjdk13
-       os: windows
+      jdk: openjdk13
+      os: windows
 
 script:
   - cd lab1
