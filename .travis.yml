@@ -1,5 +1,15 @@
 language: java
-jdk: openjdk13
+
+matrix:
+  include:
+    - name: "Test Linux"
+       jdk: openjdk13
+    - name: "Test macOS"
+       jdk: openjdk13
+       os: osx
+    - name: "Test Windows"
+       jdk: openjdk13
+       os: windows
 
 script:
   - cd lab1
