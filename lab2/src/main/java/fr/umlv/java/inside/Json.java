@@ -9,6 +9,7 @@ import java.util.Comparator;
 import static java.util.stream.Collectors.joining;
 
 public class Json {
+
     /*public static String toJSON(Person person) {
         return
                 "{\n" +
@@ -26,13 +27,11 @@ public class Json {
     }*/
 
     public static String toJSON(Object obj){
-        var list = Arrays.stream(obj.getClass().getMethods())
-                .filter(m -> m.getName().startsWith("get"))
+        return Arrays.stream(obj.getClass().getMethods())
+                .filter(m -> m.getName().startsWith("get") && m.isAnnotationPresent(JSONProperty.class))
                 .sorted(Comparator.comparing(Method::getName))
                 .map(m -> propertyName(m.getName())+" : "+formatData(m, obj))
                 .collect(joining(",", "{","}"));
-        System.out.println(list);
-        return list;
     }
 
     private static String propertyName(String name) {
@@ -50,13 +49,6 @@ public class Json {
                 throw (RuntimeException) cause;
             throw  new UndeclaredThrowableException(cause);
         }
-    }
-
-    public static void main(String[] args) {
-        var person = new Person("John", "Doe");
-        System.out.println(toJSON(person));
-        var alien = new Alien("E.T.", 100);
-        System.out.println(toJSON(alien));
     }
 
 }
