@@ -1,6 +1,7 @@
 package fr.umlv.java.inside;
 
 import java.util.Arrays;
+import static java.util.stream.Collectors.joining;
 
 public class Main {
     /*public static String toJSON(Person person) {
@@ -20,8 +21,7 @@ public class Main {
     }*/
 
     public static String toJSON(Object obj){
-        Arrays.stream(obj.getClass().getMethods()).filter(m -> m.getName().startsWith("get")).forEach(g -> System.out.println(propertyName(g.getName())));
-        return "";
+        return Arrays.stream(obj.getClass().getMethods()).filter(m -> m.getName().startsWith("get")).map(m -> propertyName(m.getName())).collect(joining(",", "{","}"));
     }
 
     private static String propertyName(String name) {
