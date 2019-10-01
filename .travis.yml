@@ -9,5 +9,5 @@ matrix:
       os: osx
 
 script:
-  - cd lab1
+  - cd lab2
   - mvn clean package
