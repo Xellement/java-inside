@@ -1,8 +1,5 @@
 package fr.umlv.java.inside;
 
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.UndeclaredThrowableException;
@@ -10,7 +7,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 import static java.util.stream.Collectors.joining;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Json {
     /*public static String toJSON(Person person) {
