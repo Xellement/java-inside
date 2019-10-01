@@ -12,11 +12,24 @@ public class JsonTest {
     @Test
     public void toJSONTestPerson() {
         var person = new Person("John", "Doe");
-        assertEquals("{firstName : John,lastName : Doe}", toJSON(person));
+        assertEquals("{First-Name : John,lastName : Doe}", toJSON(person));
+
     }
 
     @Test
     public void toJSONTestAlien() {
+        var alien = new Alien("E.T.", 100);
+        assertEquals("{age : 100,planet : E.T.}", toJSON(alien));
+    }
+
+    @Test
+    public void toJSONTest2Person() {
+        var person = new Person("John", "Doe");
+        assertEquals("{First-Name : John,lastName : Doe}", toJSON(person));
+    }
+
+    @Test
+    public void toJSONTest2Alien() {
         var alien = new Alien("E.T.", 100);
         assertEquals("{age : 100,planet : E.T.}", toJSON(alien));
     }
@@ -30,7 +43,7 @@ public class JsonTest {
             this.lastName = Objects.requireNonNull(lastName);
         }
 
-        @JSONProperty
+        @JSONProperty("First-Name")
         public String getFirstName() {
             return firstName;
         }

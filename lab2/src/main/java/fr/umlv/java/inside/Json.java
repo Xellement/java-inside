@@ -26,16 +26,32 @@ public class Json {
                         "}\n";
     }*/
 
+    private static final ClassValue<Method[]> cv =new ClassValue<>() {
+        @Override
+        protected Method[] computeValue(Class<?> type) {
+            return type.getMethods();
+        }
+    };
+
     public static String toJSON(Object obj){
-        return Arrays.stream(obj.getClass().getMethods())
-                .filter(m -> m.getName().startsWith("get") && m.isAnnotationPresent(JSONProperty.class))
+        return Arrays.stream(cv.get(obj.getClass()))
+                .filter(Json::isCorrect)
                 .sorted(Comparator.comparing(Method::getName))
-                .map(m -> propertyName(m.getName())+" : "+formatData(m, obj))
+                .map(m -> getDisplayName(m)+" : "+formatData(m, obj))
                 .collect(joining(",", "{","}"));
+    }
+
+    private static boolean isCorrect(Method m){
+        return m.getName().startsWith("get") && m.isAnnotationPresent(JSONProperty.class);
     }
 
     private static String propertyName(String name) {
         return Character.toLowerCase(name.charAt(3)) + name.substring(4);
+    }
+
+    private static String getDisplayName(Method m){
+        String value = m.getAnnotation(JSONProperty.class).value();
+        return value.isEmpty()?propertyName(m.getName()):value;
     }
 
     private static Object formatData(Method method, Object obj){
