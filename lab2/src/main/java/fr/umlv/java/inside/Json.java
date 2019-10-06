@@ -5,6 +5,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.UndeclaredThrowableException;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.joining;
 
@@ -26,19 +29,20 @@ public class Json {
                         "}\n";
     }*/
 
-    private static final ClassValue<Method[]> cv =new ClassValue<>() {
+    private static final ClassValue<Function<Object, String>> cv =new ClassValue<>() {
         @Override
-        protected Method[] computeValue(Class<?> type) {
-            return type.getMethods();
+        protected Function<Object, String> computeValue(Class<?> type) {
+            var method = Arrays.stream(type.getMethods())
+                    .filter(Json::isCorrect)
+                    .sorted(Comparator.comparing(Method::getName))
+                    .collect(Collectors.toList());
+            return obj -> method.stream().map(m -> getDisplayName(m)+" : "+formatData(m, obj))
+                    .collect(joining(",", "{","}"));
         }
     };
 
     public static String toJSON(Object obj){
-        return Arrays.stream(cv.get(obj.getClass()))
-                .filter(Json::isCorrect)
-                .sorted(Comparator.comparing(Method::getName))
-                .map(m -> getDisplayName(m)+" : "+formatData(m, obj))
-                .collect(joining(",", "{","}"));
+        return cv.get(obj.getClass()).apply(obj);
     }
 
     private static boolean isCorrect(Method m){

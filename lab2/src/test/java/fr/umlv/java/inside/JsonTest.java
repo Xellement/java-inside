@@ -12,7 +12,10 @@ public class JsonTest {
     @Test
     public void toJSONTestPerson() {
         var person = new Person("John", "Doe");
-        assertEquals("{First-Name : John,lastName : Doe}", toJSON(person));
+        for (int i = 0; i < 10000000; i++) {
+            assertEquals("{First-Name : John,lastName : Doe}", toJSON(person));
+        }
+
 
     }
 
