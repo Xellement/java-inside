@@ -1,0 +1,17 @@
+fr\umlv\java\inside\generated\LoggerBenchMark_jmhType.class
+fr\umlv\java\inside\LoggerBenchMark.class
+fr\umlv\java\inside\generated\LoggerBenchMark_no_op_jmhTest.class
+fr\umlv\java\inside\generated\LoggerBenchMark_simple_logger_jmhTest.class
+fr\umlv\java\inside\generated\LoggerBenchMark_jmhType_B3.class
+fr\umlv\java\inside\generated\LoggerBenchMark_jmhType_B1.class
+fr\umlv\java\inside\LoggerBenchMark$FastLoggerClass.class
+fr\umlv\java\inside\Logger$1.class
+fr\umlv\java\inside\Logger$2.class
+fr\umlv\java\inside\LoggerBenchMark$LoggerClass.class
+fr\umlv\java\inside\Logger.class
+META-INF\BenchmarkList
+fr\umlv\java\inside\generated\LoggerBenchMark_jmhType_B2.class
+fr\umlv\java\inside\generated\LoggerBenchMark_simpleFast_logger_jmhTest.class
+META-INF\CompilerHints
+fr\umlv\java\inside\generated\LoggerBenchMark_simple_logger_fastOf_disable_jmhTest.class
+fr\umlv\java\inside\generated\LoggerBenchMark_simple_logger_fastof_enable_jmhTest.class

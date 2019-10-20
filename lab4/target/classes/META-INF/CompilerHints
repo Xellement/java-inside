@@ -1,0 +1,10 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,fr/umlv/java/inside/LoggerBenchMark.no_op
+inline,fr/umlv/java/inside/LoggerBenchMark.simpleFast_logger
+inline,fr/umlv/java/inside/LoggerBenchMark.simple_logger
+inline,fr/umlv/java/inside/LoggerBenchMark.simple_logger_fastOf_disable
+inline,fr/umlv/java/inside/LoggerBenchMark.simple_logger_fastof_enable

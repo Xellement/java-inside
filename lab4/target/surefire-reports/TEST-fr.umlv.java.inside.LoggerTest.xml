@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.04" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.umlv.java.inside.LoggerTest" time="0.084" tests="7" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\kevin.martin\Desktop\java-inside\lab1\target\test-classes;C:\Users\kevin.martin\Desktop\java-inside\lab1\target\classes;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kevin.martin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\kevin.martin\Desktop\java-inside\lab4\target\test-classes;C:\Users\kevin.martin\Desktop\java-inside\lab4\target\classes;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kevin.martin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-core\1.21\jmh-core-1.21.jar;C:\Users\kevin.martin\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\kevin.martin\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.21\jmh-generator-annprocess-1.21.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13\bin"/>
-    <property name="sun.java.command" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire5634173872927740178\surefirebooter9044081573537836678.jar C:\Users\kevin.martin\AppData\Local\Temp\surefire5634173872927740178 2019-10-15T11-20-08_672-jvmRun1 surefire7213799030483163967tmp surefire_09951647799397839649tmp"/>
+    <property name="sun.java.command" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971\surefirebooter9409348168483659563.jar C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971 2019-10-20T15-50-02_203-jvmRun1 surefire3296758321849775478tmp surefire_04567211186917258708tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\kevin.martin\Desktop\java-inside\lab1\target\test-classes;C:\Users\kevin.martin\Desktop\java-inside\lab1\target\classes;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kevin.martin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\kevin.martin\Desktop\java-inside\lab4\target\test-classes;C:\Users\kevin.martin\Desktop\java-inside\lab4\target\classes;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kevin.martin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-core\1.21\jmh-core-1.21.jar;C:\Users\kevin.martin\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\kevin.martin\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.21\jmh-generator-annprocess-1.21.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\kevin.martin"/>
     <property name="user.language" value="fr"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2019-09-17"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-13"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\kevin.martin\Desktop\java-inside\lab1"/>
+    <property name="basedir" value="C:\Users\kevin.martin\Desktop\java-inside\lab4"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire5634173872927740178\surefirebooter9044081573537836678.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971\surefirebooter9409348168483659563.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13+33"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\kevin.martin\AppData\Local\Temp\"/>
     <property name="java.version" value="13"/>
-    <property name="user.dir" value="C:\Users\kevin.martin\Desktop\java-inside\lab1"/>
+    <property name="user.dir" value="C:\Users\kevin.martin\Desktop\java-inside\lab4"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -55,12 +55,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="TestSwitch2Cat" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.015"/>
-  <testcase name="TestSwitch2Dog" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.001"/>
-  <testcase name="TestSwitchFish" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.001"/>
-  <testcase name="TestSwitchNull" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.006"/>
-  <testcase name="TestSwitchCat" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.002"/>
-  <testcase name="TestSwitchDog" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0"/>
-  <testcase name="TestSwitch2Fish" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0"/>
-  <testcase name="TestSwitch2Null" classname="fr.umlv.java.inside.lab1.SwitchExampleTest" time="0.001"/>
+  <testcase name="testFastLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.034"/>
+  <testcase name="logFastNull" classname="fr.umlv.java.inside.LoggerTest" time="0.003"/>
+  <testcase name="ofNull" classname="fr.umlv.java.inside.LoggerTest" time="0.005"/>
+  <testcase name="unableLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.008">
+    <failure message="expected: &lt;&gt; but was: &lt;LOL&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <LOL>
+	at fr.umlv.java.inside.LoggerTest.unableLogger(LoggerTest.java:51)
+]]></failure>
+  </testcase>
+  <testcase name="logNull" classname="fr.umlv.java.inside.LoggerTest" time="0.001"/>
+  <testcase name="ofFastNull" classname="fr.umlv.java.inside.LoggerTest" time="0.002"/>
+  <testcase name="testLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.001"/>
 </testsuite>
