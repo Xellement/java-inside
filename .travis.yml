@@ -6,7 +6,7 @@ os:
   - osx
 
 env :
-  - matrix :
+  matrix :
     - TARGET : "lab1"
     - TARGET : "lab2"
     - TARGET : "lab3"
