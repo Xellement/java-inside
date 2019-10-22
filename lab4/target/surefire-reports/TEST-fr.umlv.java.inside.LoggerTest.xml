@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.umlv.java.inside.LoggerTest" time="0.084" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.umlv.java.inside.LoggerTest" time="0.051" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13\bin"/>
-    <property name="sun.java.command" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971\surefirebooter9409348168483659563.jar C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971 2019-10-20T15-50-02_203-jvmRun1 surefire3296758321849775478tmp surefire_04567211186917258708tmp"/>
+    <property name="sun.java.command" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire8380723808515465295\surefirebooter15430524105970689754.jar C:\Users\kevin.martin\AppData\Local\Temp\surefire8380723808515465295 2019-10-20T15-52-57_191-jvmRun1 surefire7997830658115387583tmp surefire_02396918207010302889tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\kevin.martin\Desktop\java-inside\lab4\target\test-classes;C:\Users\kevin.martin\Desktop\java-inside\lab4\target\classes;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\kevin.martin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-core\1.21\jmh-core-1.21.jar;C:\Users\kevin.martin\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\kevin.martin\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\kevin.martin\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.21\jmh-generator-annprocess-1.21.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire17061500651910785971\surefirebooter9409348168483659563.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\kevin.martin\AppData\Local\Temp\surefire8380723808515465295\surefirebooter15430524105970689754.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13+33"/>
@@ -55,14 +55,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testFastLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.034"/>
+  <testcase name="testFastLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.026"/>
   <testcase name="logFastNull" classname="fr.umlv.java.inside.LoggerTest" time="0.003"/>
-  <testcase name="ofNull" classname="fr.umlv.java.inside.LoggerTest" time="0.005"/>
-  <testcase name="unableLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.008">
-    <failure message="expected: &lt;&gt; but was: &lt;LOL&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <LOL>
-	at fr.umlv.java.inside.LoggerTest.unableLogger(LoggerTest.java:51)
-]]></failure>
-  </testcase>
+  <testcase name="ofNull" classname="fr.umlv.java.inside.LoggerTest" time="0.004"/>
   <testcase name="logNull" classname="fr.umlv.java.inside.LoggerTest" time="0.001"/>
   <testcase name="ofFastNull" classname="fr.umlv.java.inside.LoggerTest" time="0.002"/>
   <testcase name="testLogger" classname="fr.umlv.java.inside.LoggerTest" time="0.001"/>

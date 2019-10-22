@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.umlv.java.inside.LoggerTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.084 s <<< FAILURE! - in fr.umlv.java.inside.LoggerTest
-unableLogger  Time elapsed: 0.008 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <> but was: <LOL>
-	at fr.umlv.java.inside.LoggerTest.unableLogger(LoggerTest.java:51)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in fr.umlv.java.inside.LoggerTest
