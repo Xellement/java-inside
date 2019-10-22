@@ -1,13 +1,17 @@
 language: java
+jdk: openjdk13
 
-matrix:
-  include:
-    - name: "Test Linux"
-      jdk: openjdk13
-    - name: "Test macOS"
-      jdk: openjdk13
-      os: osx
+os:
+  - linux
+  - osx
+
+env:
+  - matrix:
+    - TARGET : "lab1"
+    - TARGET : "lab2"
+    - TARGET : "lab3"
+    - TARGET : "lab4"
+    - TARGET : "lab5"
 
 script:
-  - cd lab2
-  - mvn clean package
+  - cd $TARGET && mvn clean package
