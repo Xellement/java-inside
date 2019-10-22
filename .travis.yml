@@ -5,8 +5,8 @@ os:
   - linux
   - osx
 
-env:
-  - matrix:
+env :
+  - matrix :
     - TARGET : "lab1"
     - TARGET : "lab2"
     - TARGET : "lab3"
@@ -14,4 +14,4 @@ env:
     - TARGET : "lab5"
 
 script:
-  - cd $TARGET && mvn clean package
+  - cd $TARGET && mvn package
