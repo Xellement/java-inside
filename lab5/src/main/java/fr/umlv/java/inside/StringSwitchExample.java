@@ -55,26 +55,48 @@ public class StringSwitchExample {
         return mh;
     }
 
+    static int stringSwitch3(String msg) {
+        var mh = createMHFromStrings3("foo", "bar", "bazz");
+        try{
+            return (int) mh.invokeExact(msg);
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Throwable t){
+            throw new UndeclaredThrowableException(t);
+        }
+    }
     public static MethodHandle createMHFromStrings3(String... matches) {
         return new InliningCache(matches).dynamicInvoker();
     }
 
     static class InliningCache extends MutableCallSite {
         private static final MethodHandle SLOW_PATH;
-        static {
-            SLOW_PATH = ...
-        }
-
         private final List<String> matches;
+
+        static {
+            try {
+                SLOW_PATH = MethodHandles.lookup()
+                        .findVirtual(InliningCache.class, "slowPath", MethodType.methodType(int.class, String.class));
+            } catch (IllegalAccessException | NoSuchMethodException e) {
+                throw new AssertionError(e);
+            }
+        }
 
         public InliningCache(String... matches) {
             super(MethodType.methodType(int.class, String.class));
             this.matches = List.of(matches);
-            setTarget(MethodHandles.insertArgument(SLOW_PATH, 0, this));
+            setTarget(MethodHandles.insertArguments(SLOW_PATH, 0, this));
         }
 
-        private MethodHandle slowPath(String value) {
-            // TODO
+        private int slowPath(String value) {
+            var index = matches.indexOf(value);
+            var mh = MethodHandles.guardWithTest(
+                    MethodHandles.insertArguments(STRING_EQUALS, 1, value),
+                    MethodHandles.dropArguments(MethodHandles.constant(int.class, index), 0, String.class),
+                    getTarget()
+            );
+            setTarget(mh);
+            return index;
         }
     }
 
