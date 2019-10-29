@@ -1,20 +1,32 @@
 package fr.umlv.java.inside;
 
+import java.util.ArrayDeque;
+import java.util.List;
+
 public class Example1 {
 
     public static void main(String[] args) {
 
-        var scope = new ContinuationScope("scope1");
-        var continuation = new Continuation( scope, () -> {
-            Continuation.yield(scope);
-            //System.out.println(Continuation.getCurrentContinuation(scope));
-            //System.out.println(Thread.currentThread().getName());
-            System.out.println("hello continuation");
+        var scope = Scheduler.SCOPE;
+        var scheduler = new Scheduler();
+        var ctn1 = new Continuation( scope, () -> {
+            System.out.println("start 1");
+            scheduler.enqueue();
+            System.out.println("middle 1");
+            scheduler.enqueue();
+            System.out.println("end 1");
         });
-        continuation.run();
-        System.out.println(continuation.isDone());
-        continuation.run();
-        System.out.println(continuation.isDone());
+        var ctn2 = new Continuation( scope, () -> {
+            System.out.println("start 2");
+            scheduler.enqueue();
+            System.out.println("middle 2");
+            scheduler.enqueue();
+            System.out.println("end 2");
+        });
+
+        var list = List.of(ctn1, ctn2);
+        list.forEach(Continuation::run);
+        scheduler.runLoop();
     }
 
 }
@@ -28,5 +40,6 @@ question 6 : La continuation est déjà finie une fois et ne peut en effectuer u
 Normalement, nous voudrions pouvoir relancer plusieur fois une continuatation
 question 9 : nous avons un Pinned MONITOR = on punaise la continuation dans le thread actuel que
 nous pouvons pas déplacer
+question 11 : Un thread peut executer plusieur Continuation !!!
 
  */
