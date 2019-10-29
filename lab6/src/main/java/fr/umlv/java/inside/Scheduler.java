@@ -20,10 +20,10 @@ public class Scheduler {
 
     public void runLoop(){
         while (!deque.isEmpty()){
-            var ctn = deque.poll();
+            var ctn = deque.pollLast();
             ctn.run();
             if (!ctn.isDone())
-                deque.offer(ctn);
+                deque.offerFirst(ctn);
         }
     }
 
