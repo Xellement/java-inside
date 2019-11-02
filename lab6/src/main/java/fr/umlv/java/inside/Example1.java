@@ -9,22 +9,30 @@ public class Example1 {
 
         var scope = Scheduler.SCOPE;
         var scheduler = new Scheduler();
-        var ctn1 = new Continuation( scope, () -> {
+
+        var ctn1 = new Continuation(scope, () -> {
             System.out.println("start 1");
             scheduler.enqueue();
             System.out.println("middle 1");
             scheduler.enqueue();
             System.out.println("end 1");
         });
-        var ctn2 = new Continuation( scope, () -> {
+        var ctn2 = new Continuation(scope, () -> {
             System.out.println("start 2");
             scheduler.enqueue();
             System.out.println("middle 2");
             scheduler.enqueue();
             System.out.println("end 2");
         });
+        var ctn3 = new Continuation(scope, () -> {
+            System.out.println("start 3");
+            scheduler.enqueue();
+            System.out.println("middle 3");
+            scheduler.enqueue();
+            System.out.println("end 3");
+        });
 
-        var list = List.of(ctn1, ctn2);
+        var list = List.of(ctn1, ctn2, ctn3);
         list.forEach(Continuation::run);
         scheduler.runLoop();
     }
